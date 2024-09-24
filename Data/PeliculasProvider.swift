@@ -33,4 +33,28 @@ class PeliculasProvider {
         task.resume()
     }
     
+    static func findPeliculasById(_ imdbID: String, withResult: @escaping
+                                    (Pelicula) -> Void) {
+        guard let url = URL(string: "\(Constants.BASE_URL)&i=\(imdbID)") else {
+            print("URL not valid")
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                // Handle the error
+                print("Error: \(error.localizedDescription)")
+                return
+            } else if let data = data {
+                // Process the data
+                print("data: \(data)")
+                //if JSONDecoder().decode(Pelicula.self, from: data)
+                let result = try! JSONDecoder().decode(Pelicula.self, from: data)
+                print("result: \(result)")
+                withResult(result)
+            }
+        }
+        task.resume()
+    }
+    
 }

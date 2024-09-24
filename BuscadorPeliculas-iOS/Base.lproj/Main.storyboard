@@ -29,7 +29,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekK-0R-WRe">
                                                     <rect key="frame" x="24" y="18" width="345" height="445"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBT-0B-nHQ">
                                                     <rect key="frame" x="20" y="301" width="353" height="40"/>
@@ -46,7 +46,7 @@
                                         <connections>
                                             <outlet property="posterImageView" destination="ekK-0R-WRe" id="dOt-Ig-UrR"/>
                                             <outlet property="titleLabel" destination="OBT-0B-nHQ" id="Sf8-F4-qsf"/>
-                                            <segue destination="4rw-2F-CKV" kind="show" identifier="detallePelicula" id="HhK-nj-Dfv"/>
+                                            <segue destination="4rw-2F-CKV" kind="show" identifier="detallePelicula" id="VvV-0h-rwt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -87,6 +87,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="tv9-p4-Rwq"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="nJ3-2t-4Nb" id="fJB-k7-oYW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3my-rS-qOk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,8 +9,9 @@ import Foundation
 
 class PeliculasProvider {
     
-    static func findPeliculasByName(_ name: String, withResult: @escaping ([Pelicula]) -> Void) {
-        guard let url = URL(string: "\(Constants.BASE_URL)s=\(name)") else {
+    static func findPeliculasByName(_ name: String, withResult: @escaping
+                                    ([Pelicula]) -> Void) {
+        guard let url = URL(string: "\(Constants.BASE_URL)&s=\(name)") else {
             print("URL not valid")
             return
         }
@@ -22,7 +23,10 @@ class PeliculasProvider {
                 return
             } else if let data = data {
                 // Process the data
-                let result = try! JSONDecoder().decode(Peliculas.self, from: data)
+                print("data: \(data)")
+                //if JSONDecoder().decode(Pelicula.self, from: data)
+                let result = try! JSONDecoder().decode(PeliculasResponse.self, from: data)
+                print("result: \(result)")
                 withResult(result.Search)
             }
         }

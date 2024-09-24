@@ -18,6 +18,7 @@
 		6C35FAB32CA2AA4400FA8850 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35FAB12CA2AA4400FA8850 /* UIImageViewExtension.swift */; };
 		6C35FAB62CA2AAD500FA8850 /* PeliculasProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35FAB52CA2AAD500FA8850 /* PeliculasProvider.swift */; };
 		6C35FAB92CA2ACE200FA8850 /* PeliculasViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35FAB82CA2ACE200FA8850 /* PeliculasViewCell.swift */; };
+		6C35FABC2CA2CC1700FA8850 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35FABB2CA2CC1700FA8850 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		6C35FAB12CA2AA4400FA8850 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageViewExtension.swift; path = Utils/UIImageViewExtension.swift; sourceTree = "<group>"; };
 		6C35FAB52CA2AAD500FA8850 /* PeliculasProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeliculasProvider.swift; sourceTree = "<group>"; };
 		6C35FAB82CA2ACE200FA8850 /* PeliculasViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeliculasViewCell.swift; sourceTree = "<group>"; };
+		6C35FABB2CA2CC1700FA8850 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		6C35FA8D2CA2A36900FA8850 = {
 			isa = PBXGroup;
 			children = (
+				6C35FABA2CA2CC0100FA8850 /* ViewControllers */,
 				6C35FAB72CA2ACBB00FA8850 /* ViewCells */,
 				6C35FAB02CA2AA4400FA8850 /* Constants.swift */,
 				6C35FAB12CA2AA4400FA8850 /* UIImageViewExtension.swift */,
@@ -72,7 +75,6 @@
 			children = (
 				6C35FA992CA2A36900FA8850 /* AppDelegate.swift */,
 				6C35FA9B2CA2A36900FA8850 /* SceneDelegate.swift */,
-				6C35FA9D2CA2A36900FA8850 /* ListViewController.swift */,
 				6C35FA9F2CA2A36900FA8850 /* Main.storyboard */,
 				6C35FAA22CA2A36900FA8850 /* Assets.xcassets */,
 				6C35FAA42CA2A36900FA8850 /* LaunchScreen.storyboard */,
@@ -96,6 +98,15 @@
 				6C35FAB82CA2ACE200FA8850 /* PeliculasViewCell.swift */,
 			);
 			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		6C35FABA2CA2CC0100FA8850 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C35FA9D2CA2A36900FA8850 /* ListViewController.swift */,
+				6C35FABB2CA2CC1700FA8850 /* DetailsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 			files = (
 				6C35FAB62CA2AAD500FA8850 /* PeliculasProvider.swift in Sources */,
 				6C35FAB22CA2AA4400FA8850 /* Constants.swift in Sources */,
+				6C35FABC2CA2CC1700FA8850 /* DetailsViewController.swift in Sources */,
 				6C35FAAF2CA2A47B00FA8850 /* Peliculas.swift in Sources */,
 				6C35FAB32CA2AA4400FA8850 /* UIImageViewExtension.swift in Sources */,
 				6C35FA9E2CA2A36900FA8850 /* ListViewController.swift in Sources */,

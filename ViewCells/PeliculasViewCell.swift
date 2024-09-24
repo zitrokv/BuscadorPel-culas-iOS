@@ -14,8 +14,9 @@ class PeliculasViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     func render(pelicula: Pelicula) {
-        titleLabel.text = pelicula.title
-        posterImageView.loadFrom(url: pelicula.poster.url)
+        titleLabel.text = pelicula.Title
+        posterImageView.loadFrom(url: pelicula.Poster)
+        //posterImageView.loadFrom(url: pelicula.Poster)
     }
 
 

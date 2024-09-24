@@ -27,29 +27,35 @@ class ListViewController: UIViewController, UITableViewDataSource {
             }
         })
         
-       /* SuperHeroProvider.findSuperHeroesByName("Super", withResult: { results in
-            self.superHeroList = results
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        })
-        */
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return peliculasList.count
     }
     
-    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        as! SuperHeroViewCell
+        as! PeliculasViewCell
         
-        let superHero = superHeroList[indexPath.row]
+        let pelicula = peliculasList[indexPath.row]
         
-        cell.render(superHero: superHero)
+        cell.render(pelicula: pelicula)
+        
+        print(pelicula)
         
         return cell
-    }*/
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "detallePelicula"){
+            print("SEGUE aqui")
+            let viewController = segue.destination as! DetailViewController
+            
+            let indexPath = tableView.indexPathForSelectedRow!.row
+            viewController.pelicula = peliculasList[indexPath]
+        }
+    }
     
 
 

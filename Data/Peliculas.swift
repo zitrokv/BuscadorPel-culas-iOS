@@ -7,16 +7,18 @@
 
 import Foundation
 
-struct Peliculas: Codable{
+struct PeliculasResponse: Codable{
     let Search: [Pelicula]
-    let totalResults: String
-    let Response: String
+    let totalResults: String?
+    let Response: String?
+    let Error: String?
 }
 
 struct Pelicula: Codable{
-    let title: String
-    let year: String
-    let poster: Image
+    let Title: String
+    let Year: String
+    let Poster: String
+    let imdbID: String
     
 }
 

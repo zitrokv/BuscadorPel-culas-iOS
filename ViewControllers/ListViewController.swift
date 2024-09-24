@@ -12,15 +12,19 @@ class ListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var imageViewPelicula: UIView!
+    
     var peliculasList: [Pelicula] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
+        
         tableView.dataSource = self
         
-        PeliculasProvider.findPeliculasByName("Terminator", withResult: { results in
+        PeliculasProvider.findPeliculasByName("Term&page=1", withResult: { results in
             self.peliculasList = results
             DispatchQueue.main.async {
                 self.tableView.reloadData()

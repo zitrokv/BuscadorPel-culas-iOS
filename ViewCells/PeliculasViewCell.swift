@@ -13,9 +13,12 @@ class PeliculasViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var yearPeliculaLabel: UILabel!
+    
     func render(pelicula: Pelicula) {
         titleLabel.text = pelicula.Title
         posterImageView.loadFrom(url: pelicula.Poster)
+        yearPeliculaLabel.text = pelicula.Year
         //posterImageView.loadFrom(url: pelicula.Poster)
     }
 

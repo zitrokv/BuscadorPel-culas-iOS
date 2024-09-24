@@ -148,7 +148,7 @@ class DetailViewController: UIViewController {
                             //superHeroe.powerstats.combat!
                         
                         case 3:
-                            "\t" + (pelicula.Plot ??  "aaa")
+                            "\t" + (pelicula.Director ??  "aaa")
                             //superHeroe.powerstats.intelligence!
                             
                         case 4:
@@ -230,12 +230,12 @@ class DetailViewController: UIViewController {
                         case 3:
                             UIImage(systemName:"brain.head.profile")
                             
-                        case 4:
+                        /*case 4:
                             UIImage(systemName:"bolt.ring.closed")
-                            
+                            */
                         default:
-                            UIImage(systemName:"gauge.open.with.lines.needle.67percent.and.arrowtriangle")
-                            
+                            UIImage(systemName: "")
+                        
                         }
                         
                         configuration.subtitle = switch Int(number){
@@ -243,11 +243,11 @@ class DetailViewController: UIViewController {
                             "\t" + (pelicula.Runtime ?? "ccc")
                             
                         case 2:
-                            "\t" + (pelicula.Director ??  "ddd")
+                            "\t" + (pelicula.Country ??  "ddd")
                             //superHeroe.powerstats.combat!
                         
                         case 3:
-                            "\t" + (pelicula.Country ?? "fff")
+                            "\t" + (pelicula.Plot ?? "fff")
                             //superHeroe.powerstats.intelligence!
                         /*
                         case 4:

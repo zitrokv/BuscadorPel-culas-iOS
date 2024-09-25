@@ -11,6 +11,7 @@ class PeliculasViewCell: UITableViewCell {
     
     @IBOutlet weak var posterImageView: UIImageView!
     
+    @IBOutlet weak var runtimeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var yearPeliculaLabel: UILabel!
@@ -19,6 +20,7 @@ class PeliculasViewCell: UITableViewCell {
         titleLabel.text = pelicula.Title
         posterImageView.loadFrom(url: pelicula.Poster)
         yearPeliculaLabel.text = pelicula.Year
+        runtimeLabel.text = pelicula.Runtime ?? "NOtime"
         //posterImageView.loadFrom(url: pelicula.Poster)
     }
 

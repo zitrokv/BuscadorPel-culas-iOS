@@ -53,7 +53,7 @@ class DetailViewController: UIViewController {
         }()
     
     
-    func verDetallePelicula(_ pelicula : Pelicula)
+    public func verDetallePelicula(_ pelicula : Pelicula)
     {
         
         self.navigationItem.title = pelicula.Title //+ " - " + pelicula.Year

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tnU-Qu-lhI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="445" estimatedRowHeight="445" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tnU-Qu-lhI">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -51,10 +51,18 @@
                                                     <color key="shadowColor" red="0.46369511330000002" green="0.4930801588" blue="0.73898345229999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <size key="shadowOffset" width="4" height="2"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEs-g4-cXt">
+                                                    <rect key="frame" x="245" y="36" width="116" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="posterImageView" destination="ekK-0R-WRe" id="dOt-Ig-UrR"/>
+                                            <outlet property="runtimeLabel" destination="QEs-g4-cXt" id="soQ-qk-EId"/>
                                             <outlet property="titleLabel" destination="OBT-0B-nHQ" id="Sf8-F4-qsf"/>
                                             <outlet property="yearPeliculaLabel" destination="Pej-Cr-BiC" id="8X2-bb-F4i"/>
                                             <segue destination="4rw-2F-CKV" kind="show" identifier="detallePelicula" id="VvV-0h-rwt"/>
@@ -74,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kKk-Go-Mus"/>
                     <connections>
+                        <outlet property="runtimeLabel" destination="tnU-Qu-lhI" id="A2Z-aS-JNF"/>
                         <outlet property="tableView" destination="tnU-Qu-lhI" id="mKy-QZ-8zm"/>
                     </connections>
                 </viewController>

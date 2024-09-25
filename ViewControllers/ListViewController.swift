@@ -14,7 +14,10 @@ class ListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var imageViewPelicula: UIView!
     
+    @IBOutlet weak var runtimeLabel: UITableView!
+    
     var peliculasList: [Pelicula] = []
+    var pelicula: Pelicula? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,17 @@ class ListViewController: UIViewController, UITableViewDataSource {
         PeliculasProvider.findPeliculasByName("Term&page=1", withResult: { results in
             self.peliculasList = results
             DispatchQueue.main.async {
+                for itemPelicula in self.peliculasList {
+                            PeliculasProvider.findPeliculasById(itemPelicula.imdbID) { result in
+                                DispatchQueue.main.async {
+                                    self.pelicula = result
+                                    //DetailViewController.verDetallePelicula(self.pelicula!)
+                                }
+                            }
+                        }
+                
+            
+                
                 self.tableView.reloadData()
             }
         })
